@@ -160,7 +160,7 @@ always @(posedge FPGA_CLK2_50) begin
 		else begin
 			if(~cnt[7]) btnled <= 0;
 			else btnled <= 4'b0ZZZ;
-			if(&cnt) {btn_r,btn_u} <= ~BTNLED[1:0]; //btn_o,
+			if(&cnt) {btn_r,btn_o,btn_u} <= ~BTNLED[2:0];
 		end
 	end
 	else begin

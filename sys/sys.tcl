@@ -29,6 +29,8 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ARDUINO
 #============================================================
 # USER PORT
 #============================================================
+set_location_assignment PIN_AE15 -to USER_IO[7]
+set_location_assignment PIN_AF17 -to USER_IO[6]
 set_location_assignment PIN_AF15 -to USER_IO[5]
 set_location_assignment PIN_AG16 -to USER_IO[4]
 set_location_assignment PIN_AH11 -to USER_IO[3]
@@ -110,8 +112,8 @@ set_instance_assignment -name ALLOW_SYNCH_CTRL_USAGE OFF -to *|SDRAM_*
 #============================================================
 set_location_assignment PIN_AG8 -to BTNLED[0]
 set_location_assignment PIN_AH8 -to BTNLED[1]
-set_location_assignment PIN_AF17 -to BTNLED[2]
-set_location_assignment PIN_AE15 -to BTNLED[3]
+#set_location_assignment PIN_AF17 -to BTNLED[2]
+#set_location_assignment PIN_AE15 -to BTNLED[3]
 
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BTNLED[*]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BTNLED[*]

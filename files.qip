@@ -24,3 +24,4 @@ set_global_assignment -name VHDL_FILE src/util/clock_divider.vhd
 set_global_assignment -name VHDL_FILE src/util/download_buffer.vhd
 set_global_assignment -name VHDL_FILE src/util/edge_detector.vhd
 set_global_assignment -name SYSTEMVERILOG_FILE Arcade-Rygar.sv
+set_global_assignment -name VERILOG_FILE src/joydb9md.v

@@ -7,5 +7,4 @@ db
 incremental_db
 jtag.cdf
 output_files
-rom
 rygar_assignment_defaults.qdf
