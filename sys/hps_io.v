@@ -50,7 +50,8 @@ module hps_io #(parameter STRLEN=0, PS2DIV=0, WIDE=0, VDNUM=1, PS2WE=0)
 	output reg [15:0] joystick_analog_3,
 	output reg [15:0] joystick_analog_4,
 	output reg [15:0] joystick_analog_5,
-
+	input      [15:0] joy_raw,
+	
 	output      [1:0] buttons,
 	output            forced_scandoubler,
 
@@ -488,6 +489,8 @@ always@(posedge clk_sys) begin
 					
 					//menu mask
 					'h2E: if(byte_cnt == 1) io_dout <= status_menumask;
+					 // Reading user_io raw joy
+					'h37: io_dout <= joy_raw;
 				endcase
 			end
 		end
