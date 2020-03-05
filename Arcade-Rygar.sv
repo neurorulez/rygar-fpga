@@ -191,8 +191,8 @@ wire [15:0] joy = joystick_0 | joystick_1;
 
 wire forced_scandoubler;
 
-wire [15:0] joystick_0 = |status[31:30] ? {joydb15_1[9],joydb15_1[7],joydb15_1[8],joydb15_1[5:0]} : joystick_0_USB;
-wire [15:0] joystick_1 =  status[31]    ? {joydb15_2[9],joydb15_2[8],joydb15_2[7],joydb15_2[5:0]} : status[30] ? joystick_0_USB : joystick_1_USB;
+wire [15:0] joystick_0 = |status[31:30] ? {joydb15_1[11],joydb15_1[9],joydb15_1[10],joydb15_1[5:0]} : joystick_0_USB;
+wire [15:0] joystick_1 =  status[31]    ? {joydb15_2[11],joydb15_2[10],joydb15_2[9],joydb15_2[5:0]} : status[30] ? joystick_0_USB : joystick_1_USB;
 
 reg [15:0] joydb15_1,joydb15_2;
 joy_db15 joy_db15
